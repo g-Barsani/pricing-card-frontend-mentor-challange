@@ -1,0 +1,133 @@
+/* The boxes will be all inside the parent container */
+html {
+  box-sizing: border-box;
+  font-family: 'Karla';
+  font-size: 16px;
+  font-weight: 400;
+}
+
+body {
+  padding: 20px;
+}
+
+h2, h4, p {
+  margin: 0;
+}
+
+/* All elements will inherit that root level sizing (html) */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+#card {
+  width: 600px;
+  height: 400px;
+  box-shadow: 2px 3px 15px 5px rgba(0,0,0,0.35);
+  border-radius: 5px;
+/*   It hides the child divs from breaking from the main container */
+  overflow: hidden;
+}
+
+#top-section {
+/*   It's 100% so it can fill the entire space of the container */
+  width: 100%;
+  height: 45%;
+  padding: 25px;
+}
+
+#bottom-section {
+  width: 100%;
+  height: 55%;
+  color: white;
+}
+
+#bottom-left-section {
+/* the width and height are relative to the parent container */
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+/*   The container will snap it to the top edge of its container */
+  vertical-align: top;
+  background-color: #2ab2af;
+  padding: 25px;
+}
+
+#bottom-right-section {
+/* the width and height are relative to the parent container */
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  vertical-align: top;
+  background-color: #26C999;
+  padding: 25px;
+}
+
+#top-section h2 {
+  color: #2ab2af;
+  margin-bottom: 15px;
+}
+#top-section h4 {
+  color: #c0df34;
+  margin-bottom: 10px;
+}
+
+#top-section p {
+  color: #98a6bd;
+}
+
+button {
+  color: white;
+  background-color: #c0df34;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+button:hover {
+/*   The cursor has to be pointer so the user knows it's clickable */
+  cursor: pointer;
+  background-color: #A9C42D;
+/*   The buttom will be 102%, that is 2% larger than it's original size */
+  transform: scale(1.02);
+}
+
+#price {
+  font-weight: 700;
+/*   140% of the root element font-size */
+  font-size: 1.4rem;
+}
+
+#bottom-left-section h4 {
+  margin-bottom: 15px;
+}
+
+#bottom-left-section p {
+  font-size: 0.8rem;
+  margin-bottom: 40px;
+}
+
+#price-frequency, #price {
+  display: inline-block;
+}
+
+#price-frequency {
+/*   This element has position relative to itself */
+  position: relative;
+/*   The position has to be relative for the line below work */
+  top: -3px;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-left: 5px;
+}
+
+#price-container {
+  margin-bottom: 10px;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
