@@ -19,9 +19,7 @@ h2, h4, p {
   box-sizing: inherit;
 }
 
-#card {
-  width: 600px;
-  height: 400px;
+#card { 
   box-shadow: 2px 3px 15px 5px rgba(0,0,0,0.35);
   border-radius: 5px;
 /*   It hides the child divs from breaking from the main container */
@@ -44,7 +42,7 @@ h2, h4, p {
 #bottom-left-section {
 /* the width and height are relative to the parent container */
   display: inline-block;
-  width: 50%;
+  width: 100%;
   height: 100%;
 /*   The container will snap it to the top edge of its container */
   vertical-align: top;
@@ -55,7 +53,7 @@ h2, h4, p {
 #bottom-right-section {
 /* the width and height are relative to the parent container */
   display: inline-block;
-  width: 50%;
+  width: 100%;
   height: 100%;
   vertical-align: top;
   background-color: #58bfbd;
@@ -88,7 +86,7 @@ button:hover {
 /*   The cursor has to be pointer so the user knows it's clickable */
   cursor: pointer;
   background-color: #A9C42D;
-/*   The buttom will be 102%, that is 2% larger than it's original size */
+/*   The buttom will be 102%, that is % larger than it's original size */
   transform: scale(1.02);
 }
 
@@ -130,4 +128,17 @@ ul {
   list-style: none;
   font-size: 0.8rem;
   opacity: 0.8;
+}
+
+/* Mobile-first-approach */
+/* When the screen is less than 650px */
+@media (min-width: 576px) {
+  #card {
+    width: 550px;
+    height: 400px;
+  } 
+  
+  #bottom-left-section, #bottom-right-section {
+    width: 50%;
+  }
 }
